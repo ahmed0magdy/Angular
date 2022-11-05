@@ -1,0 +1,25 @@
+<h1>Hekkk8ydfdsaf</h1>
+4+4 = {{4+4}}
+<!-- template expression -->
+<!-- one way binding from ts to html -->
+<p>{{name}}</p>
+<input type="text" value="{{name}}">
+<input type="text" [value]="name"> <!--binding on any attribute -->
+<input type="button" value="change" (click)="chngName()">  <!-- event binding -->
+<br>
+<img [src]="beauty" style="width:10%">
+<!-- two way binding -->
+<!-- our binding -->
+<input type="text" placeholder="fname" (input)="getdata($event)" [value]="fname">
+<p>{{fname}}</p>
+<!-- angular binding -->
+<!-- ngmodel works only with value attribute -->
+<input type="text" placeholder="lname" [(ngModel)]="lname">
+<p>{{lname}}</p>
+
+
+<!-- task one -->
+<input type="text" placeholder="name" [(ngModel)]="name">
+<p>{{name}}</p>
+<button class="btn btn-primary" (click)="reset()" >reset</button>
+
