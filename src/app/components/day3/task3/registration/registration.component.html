@@ -1,0 +1,23 @@
+<p>registration2 works!</p>
+<h1>Registration</h1>
+<form class="row">
+  <div>
+    <label class="form-label lead">Name</label>
+    <input type="text" class="form-control" name="name" [(ngModel)]="stname" />
+    <div style="color: red;" *ngIf="stname.length < 3 && stname.length != 0"> Name must &gt; 3</div>
+  </div>
+
+  <div>
+    <label class="form-label lead">Age</label>
+    <input type="text" class="form-control" name="age" [(ngModel)]="stAge" />
+    <div style="color: red" *ngIf="stAge!= 0 && stAge < 20 || stAge > 40;else trueBlock;">Age &lt; 40 & &gt; 20</div>
+    <ng-template #trueBlock>
+      <div style="color: green;" *ngIf="stAge != 0">Valid</div>
+    </ng-template>
+  </div>
+
+    <button type="submit" class="btn btn-primary m-3" value="add" (click)="addNewStudent()">
+      Add
+    </button>
+
+</form>

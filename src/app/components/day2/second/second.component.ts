@@ -31,7 +31,7 @@ export class SecondComponent implements OnInit {
     {
       this.index++;
       this.src = this.arr[this.index];
-      console.log(this.index);
+      // console.log(this.index);
     }
   }
 
@@ -41,7 +41,7 @@ export class SecondComponent implements OnInit {
     {
       this.index--;
       this.src = this.arr[this.index];
-      console.log(this.index);
+      // console.log(this.index);
     }
 
   }

@@ -1,0 +1,44 @@
+<!-- Component Interaction -->
+<h1>Registration</h1>
+<form class="row">
+  <div class="col-12">
+    <label class="form-label">Name</label>
+    <input type="text" class="form-control" name="name" [(ngModel)]="stname" />
+  </div>
+  <div class="col-12">
+    <label class="form-label">Age</label>
+    <input type="text" class="form-control" name="age" [(ngModel)]="stAge" />
+  </div>
+  <div style="color: red" *ngIf="stAge > 30;else trueBlock;">Age &lt; 30</div>
+  <ng-template #trueBlock>
+    <div style="color: green;" *ngIf="stAge != 0">Valid</div>  </ng-template>
+  <div class="col-12">
+    <button
+      type="submit"
+      class="btn btn-primary"
+      value="add"
+      (click)="addNewStudent()"
+    >
+      Add
+    </button>
+  </div>
+</form>
+
+<div *ngIf="stname && stAge">
+  <h1 class="mt-5">Students</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let s of AllStudents">
+      <th>{{ s.name }}</th>
+      <td>{{ s.age }}</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
