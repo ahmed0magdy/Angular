@@ -1,0 +1,20 @@
+<p>addstudent works!</p>
+<!-- ngsubmit reference .value-->
+<form class="form" (ngSubmit)="addStu(name.value, +age.value, email.value)">
+    <div class="form-group">
+        <label>Name</label>
+        <input #name type="text" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label>Age</label>
+        <input #age type="number" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input #email type="email" class="form-control"/>
+    </div>
+    <div class="form-group m-3">
+        <input type="submit" class="btn btn-outline-success" />
+    </div>
+
+</form>

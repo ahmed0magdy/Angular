@@ -12,7 +12,8 @@ import { HomeComponent } from './components/day3/ComponentInteraction/home/home.
 import { RegistrationComponent } from './components/day3/task3/registration/registration.component';
 // import { ParentComponent } from './components/day3/ComponentInteraction/parent/parent.component';
 import { ParentComponent } from './components/day3/task3/parent/parent.component';
-import { StudentsComponent } from './components/day3/task3/students/students.component';
+// import { StudentsComponent } from './components/day3/task3/students/students.component';
+import { StudentsComponent } from './components/day5/demoFinal/students/students.component';
 import { RegisterComponent } from './components/day4/ComponentInteraction/register/register.component';
 import { StudentssComponent } from './components/day4/ComponentInteraction/studentss/studentss.component';
 import { ValidTestComponent } from './components/day4/validation/valid-test/valid-test.component';
@@ -20,12 +21,18 @@ import { ValidTestComponent } from './components/day4/validation/valid-test/vali
 import { UsersComponent } from './components/day5/demo/users/users.component';
 // import { UserDetailsComponent } from './components/day4/Routing/user-details/user-details.component';
 import { UserDetailsComponent } from './components/day5/demo/user-details/user-details.component';
-import { HeaderComponent } from './components/day4/Routing/header/header.component';
+// import { HeaderComponent } from './components/day4/Routing/header/header.component';
+import { HeaderComponent } from './components/day5/demoFinal/header/header.component';
 import { ProfileComponent } from './components/day4/Routing/profile/profile.component';
 import { ErrorComponent } from './components/day4/Routing/error/error.component';
 import { RouterModule } from '@angular/router';
 import {HttpClientModule} from '@angular/common/http'
 import { DemoService } from './services/demo.service';
+import { StudentsService } from './services/students.service';
+import { StudentItemComponent } from './components/day5/demoFinal/student-item/student-item.component';
+import { AddstudentComponent } from './components/day5/demoFinal/addstudent/addstudent.component';
+import { UpdatestudentComponent } from './components/day5/demoFinal/updatestudent/updatestudent.component';
+import { StudentDetailsComponent } from './components/day5/demoFinal/student-details/student-details.component';
 
 @NgModule({
   declarations: [
@@ -44,18 +51,23 @@ import { DemoService } from './services/demo.service';
     UserDetailsComponent,
     HeaderComponent,
     ProfileComponent,
+    StudentItemComponent,
+    AddstudentComponent,
+    UpdatestudentComponent,
+    StudentDetailsComponent,
     ErrorComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    ReactiveFormsModule,
+    FormsModule, //two way binding
+    ReactiveFormsModule,//validation
     RouterModule,
-    HttpClientModule
+    HttpClientModule//call API
   ],
   providers: [
-    DemoService
+    DemoService,
+    StudentsService
   ],
   bootstrap: [AppComponent]
 })
