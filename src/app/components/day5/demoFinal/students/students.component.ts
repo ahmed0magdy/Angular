@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { StudentsService } from 'src/app/services/students.service';
 
 @Component({
@@ -7,14 +7,19 @@ import { StudentsService } from 'src/app/services/students.service';
   styles: [
   ]
 })
-export class StudentsComponent implements OnInit {
+export class StudentsComponent implements OnInit, OnDestroy {
 
   constructor(private myService: StudentsService) { }
-  students: any
 
+  ngOnDestroy(): void {
+    // throw new Error('Method not implemented.');
+    this.stuSub.unsubscribe();
+  }
+  students: any;
+  stuSub:any;
   ngOnInit(): void { //fetch url
     let that = this;
-    this.myService.getAllStudents().subscribe(
+    this.stuSub = this.myService.getAllStudents().subscribe(
       {
         next(data) {
           that.students = data;

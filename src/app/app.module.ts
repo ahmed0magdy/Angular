@@ -59,10 +59,10 @@ import { StudentDetailsComponent } from './components/day5/demoFinal/student-det
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    AppRoutingModule,//routing file
     FormsModule, //two way binding
     ReactiveFormsModule,//validation
-    RouterModule,
+    RouterModule,//routes
     HttpClientModule//call API
   ],
   providers: [
