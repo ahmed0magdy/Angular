@@ -1,0 +1,28 @@
+<p>users works!</p>
+
+<form [formGroup]="RegFormValid" class="row" (ngSubmit)="SendData()">
+    <div>
+      <label class="form-label lead">Name</label>
+      <input formControlName="name" type="text" class="form-control" name="name" />
+    </div>
+    <div *ngIf="!NameValid" class="form-text">
+         <p class="alert alert-danger">Name Required</p>
+    </div>
+  
+    <div>
+      <label class="form-label lead">Age</label>
+      <input formControlName="age" type="text" class="form-control" name="age" />
+    </div>
+    <div *ngIf="!AgeValid" class="form-text">
+        <p class="alert alert-danger">20 &lt; Age &lt; 40</p>
+   </div>
+   <div class="mb-3">
+    <label class="form-label lead">Email address</label>
+    <input [ngStyle]="{'outline': !EmailValid ?'3px solid red':'3px solid green'}" formControlName="email" type="text" class="form-control">
+    <div *ngIf="!EmailValid" id="emailHelp" class="form-text">
+      <p class="alert alert-danger">email Required</p>
+    </div>
+  </div>
+    <input type="submit" class="btn btn-primary m-3">
+    
+  </form>

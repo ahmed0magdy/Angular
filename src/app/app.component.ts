@@ -6,4 +6,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'demo';
+
+  // students:{name:string, age:number}[] = [];
+  student:{}={}
+
+  GetData(data:{}){
+    // this.students.push(data);
+    // console.log(this.students);
+    this.student=data;
+  }
 }

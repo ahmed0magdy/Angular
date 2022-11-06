@@ -1,0 +1,22 @@
+<p>valid-test works!</p>
+<!-- reactive forms module -->
+
+<form [formGroup]="RegValidation" class="row" (ngSubmit)="sendData()">
+    <div>
+      <label class="form-label lead">Name</label>
+      <input formControlName="name" type="text" class="form-control" name="name" />
+    </div>
+    <div *ngIf="!NameValid">
+         <p>Name Required</p>
+    </div>
+  
+    <div>
+      <label class="form-label lead">Age</label>
+      <input formControlName="age" type="text" class="form-control" name="age" />
+    </div>
+    <div *ngIf="!AgeValid">
+        <p>20 &lt; Age &lt; 40</p>
+   </div>
+    <input type="submit" class="btn btn-primary m-3">
+    
+  </form>

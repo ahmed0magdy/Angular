@@ -1,0 +1,19 @@
+<p>register works!</p>
+<!-- reference # -->
+<h1>Registration</h1>
+<form class="row" (ngSubmit)="sendData(name.value, +age.value)">
+  <div>
+    <label class="form-label lead">Name</label>
+    <input #name type="text" class="form-control" name="name" />
+  </div>
+
+  <div>
+    <label class="form-label lead">Age</label>
+    <input #age type="text" class="form-control" name="age" />
+  </div>
+
+  <!-- <input type="submit" (click)="sendData(name.value, +age.value)" class="btn btn-primary m-3"> -->
+  <!-- by ngsubmit -->
+  <input type="submit" class="btn btn-primary m-3">
+  
+</form>

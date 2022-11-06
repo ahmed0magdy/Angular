@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -13,6 +13,15 @@ import { RegistrationComponent } from './components/day3/task3/registration/regi
 // import { ParentComponent } from './components/day3/ComponentInteraction/parent/parent.component';
 import { ParentComponent } from './components/day3/task3/parent/parent.component';
 import { StudentsComponent } from './components/day3/task3/students/students.component';
+import { RegisterComponent } from './components/day4/ComponentInteraction/register/register.component';
+import { StudentssComponent } from './components/day4/ComponentInteraction/studentss/studentss.component';
+import { ValidTestComponent } from './components/day4/validation/valid-test/valid-test.component';
+import { UsersComponent } from './components/day4/Routing/users/users.component';
+import { UserDetailsComponent } from './components/day4/Routing/user-details/user-details.component';
+import { HeaderComponent } from './components/day4/Routing/header/header.component';
+import { ProfileComponent } from './components/day4/Routing/profile/profile.component';
+import { ErrorComponent } from './components/day4/Routing/error/error.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -23,12 +32,22 @@ import { StudentsComponent } from './components/day3/task3/students/students.com
     HomeComponent,
     RegistrationComponent,
     ParentComponent,
-    StudentsComponent
+    StudentsComponent,
+    RegisterComponent,
+    StudentssComponent,
+    ValidTestComponent,
+    UsersComponent,
+    UserDetailsComponent,
+    HeaderComponent,
+    ProfileComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
