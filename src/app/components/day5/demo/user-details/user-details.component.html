@@ -1,0 +1,12 @@
+<p>user-details works!</p>
+<div *ngIf="user;else FalseBlock" class="alert alert-info text-center m-auto w-75">
+    <h2>Hello ya &lt;{{user.name}}&gt;</h2>
+    <h4>User Name: {{user.username}}</h4>
+    <h4>Email: {{user.email}}</h4>
+    <h4>Address[city]: {{user.address.city}}</h4>
+    <h4>Address[suite]: {{user.address.suite}}</h4>
+  </div>
+  
+  <ng-template #FalseBlock>
+    <h1>Loading...</h1>
+  </ng-template>

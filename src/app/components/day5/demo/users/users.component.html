@@ -1,0 +1,6 @@
+<p>users works!</p>
+<div class="alert alert-dark w-75 text-center m-auto mb-2" *ngFor="let u of users">
+    <h4>Name: {{u.name}}</h4>
+    <h4>User Name: {{u.username}}</h4>
+    <h4>Email: <a routerLink="/users/{{u.id}}">{{u.email}}</a></h4>
+  </div>

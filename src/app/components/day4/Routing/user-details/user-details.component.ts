@@ -8,10 +8,10 @@ import { ActivatedRoute } from '@angular/router';
   ]
 })
 export class UserDetailsComponent implements OnInit {
-//to get id in path use activated route
+//to get id in the path use activated route
 userId = 0;
   constructor(myactiveRoute:ActivatedRoute) { 
-    console.log(myactiveRoute.snapshot.params['id']);
+    // console.log(myactiveRoute.snapshot.params['id']);
     this.userId = myactiveRoute.snapshot.params['id'];
   }
 

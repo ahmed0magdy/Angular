@@ -16,12 +16,16 @@ import { StudentsComponent } from './components/day3/task3/students/students.com
 import { RegisterComponent } from './components/day4/ComponentInteraction/register/register.component';
 import { StudentssComponent } from './components/day4/ComponentInteraction/studentss/studentss.component';
 import { ValidTestComponent } from './components/day4/validation/valid-test/valid-test.component';
-import { UsersComponent } from './components/day4/Routing/users/users.component';
-import { UserDetailsComponent } from './components/day4/Routing/user-details/user-details.component';
+// import { UsersComponent } from './components/day4/Routing/users/users.component';
+import { UsersComponent } from './components/day5/demo/users/users.component';
+// import { UserDetailsComponent } from './components/day4/Routing/user-details/user-details.component';
+import { UserDetailsComponent } from './components/day5/demo/user-details/user-details.component';
 import { HeaderComponent } from './components/day4/Routing/header/header.component';
 import { ProfileComponent } from './components/day4/Routing/profile/profile.component';
 import { ErrorComponent } from './components/day4/Routing/error/error.component';
 import { RouterModule } from '@angular/router';
+import {HttpClientModule} from '@angular/common/http'
+import { DemoService } from './services/demo.service';
 
 @NgModule({
   declarations: [
@@ -47,9 +51,12 @@ import { RouterModule } from '@angular/router';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    DemoService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
