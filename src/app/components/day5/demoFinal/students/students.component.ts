@@ -27,7 +27,6 @@ export class StudentsComponent implements OnInit, OnDestroy {
         error(err) {
           console.log(err)
         }
-
       }
     )
   }

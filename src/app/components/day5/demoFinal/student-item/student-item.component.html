@@ -2,6 +2,9 @@
 <div class="alert alert-primary">
     <p>Name: {{oneStudent.name}} </p>
     <p>Age: {{oneStudent.age}} </p>
-    <p>Email: {{oneStudent.email}} </p>
+    <p>Email: <a routerLink="/student/{{oneStudent.id}}">{{oneStudent.email}}</a> </p>
     <p>ID: {{oneStudent.id}} </p>
+    <button [routerLink]="'/updatestudent'" class="btn btn-outline-warning m-3">Update</button>
+    <input type="button" value="Delete" class="btn btn-outline-danger" 
+    (click)="deleteStudent(oneStudent.id)" routerLink="/students">
 </div>

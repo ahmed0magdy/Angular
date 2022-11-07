@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { StudentsService } from 'src/app/services/students.service';
 
 @Component({
   selector: 'app-student-item',
@@ -8,11 +9,14 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class StudentItemComponent implements OnInit {
 
-  constructor() { }
+  constructor(private myservice:StudentsService) { }
 
   ngOnInit(): void {
   }
 
   @Input() oneStudent:any;
-
+  destu:any;
+deleteStudent(id:number){
+this.destu = this.myservice.deleteStudent(id).subscribe();
+}
 }
